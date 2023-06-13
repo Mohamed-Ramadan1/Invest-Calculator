@@ -1,7 +1,6 @@
 import React, { useState} from "react";
 import styles from './Form.module.css';
-
-const Form = () => {
+const Form = (props) => {
     const [currentSavings, setCurrentSavings] = useState(null);
 
     const [yearlySaving, setYearlySaving] = useState(null);
@@ -22,12 +21,13 @@ const Form = () => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        let investData = {
-            'current-savings':currentSavings,
-            'yearly-contribution':yearlySaving,
-            'expected-return':expectedInterst,
-            'duration': investDuration,
-        }
+        const investData = {
+            'current-savings': currentSavings,
+            'yearly-contribution': yearlySaving,
+            'expected-return': expectedInterst,
+            'duration': investDuration
+        };
+
 
         resetValues()
 
