@@ -23,10 +23,10 @@ const Form = () => {
     const submitHandler = (event) => {
         event.preventDefault();
         let investData = {
-            currentSavings:currentSavings,
-            yearlySaving:yearlySaving,
-            expectedInterst:expectedInterst,
-            investDuration: investDuration,
+            'current-savings':currentSavings,
+            'yearly-contribution':yearlySaving,
+            'expected-return':expectedInterst,
+            'duration': investDuration,
         }
 
         resetValues()
