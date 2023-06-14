@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Result.module.css'
-const Result = () => {
+const Result = (props) => {
+    console.log(props)
     return (
         <table className={styles.result}>
             <thead>

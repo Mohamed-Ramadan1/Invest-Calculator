@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import styles from './Form.module.css';
+import styles from './Form.module.css'
 
 const Form = (props) => {
     const [currentSavings, setCurrentSavings] = useState(null);
@@ -28,12 +28,9 @@ const Form = (props) => {
             'expected-return': expectedInterst,
             'duration': investDuration
         };
-
-        console.log(props.onCalculate(investData))
-
+        props.onCalculate(investData)
 
         resetValues()
-
     }
 
 
