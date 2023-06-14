@@ -2,11 +2,9 @@ import React from "react";
 import Form from "./Form";
 
 
-const CalculateProcess = () => {
+const CalculateProcess = (props) => {
     const calculateHandler = (userInput) => {
-        // Should be triggered when form is submitted
-        // You might not directly want to bind it to the submit event on the form though...
-
+        
         const yearlyData = []; // per-year results
 
         let currentSavings = +userInput['current-savings']; // feel free to change the shape of this input object!
@@ -27,11 +25,9 @@ const CalculateProcess = () => {
             });
         }
 
-        // do something with yearlyData ...
-        console.log(yearlyData)
-    
+        // do something with yearlyData ...    
     };
 
-    return;
+    return <Form onCalculate={calculateHandler} />
 };
-export   default CalculateProcess ;
+export default CalculateProcess ;
