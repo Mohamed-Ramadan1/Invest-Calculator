@@ -35,7 +35,8 @@ return (
     <div>
       <Header />
     <Form onCalculate={calculateHandler} />
-    <Result data={results} />
+    {!results && <p>No User Input Yet</p> }
+    {results && <Result results={results} />}
 
     
     </div>
